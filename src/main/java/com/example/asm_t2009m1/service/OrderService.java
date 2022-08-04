@@ -2,10 +2,10 @@ package com.example.asm_t2009m1.service;
 
 import com.example.asm_t2009m1.entity.Order;
 import com.example.asm_t2009m1.repository.OrderRepository;
-import com.example.asm_t2009m1.search.FilterParameter;
-import com.example.asm_t2009m1.search.OrderSpecification;
-import com.example.asm_t2009m1.search.SearchCriteria;
-import com.example.asm_t2009m1.search.SearchCriteriaOperator;
+import com.example.asm_t2009m1.entity.search.FilterParameter;
+import com.example.asm_t2009m1.entity.search.OrderSpecification;
+import com.example.asm_t2009m1.entity.search.SearchCriteria;
+import com.example.asm_t2009m1.entity.search.SearchCriteriaOperator;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -51,4 +51,5 @@ public class OrderService {
         return orderRepository.findAll(
                 specification, PageRequest.of(param.getPage() - 1, param.getLimit()));
     }
+
 }

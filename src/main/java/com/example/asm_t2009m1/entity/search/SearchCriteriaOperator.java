@@ -1,4 +1,4 @@
-package com.example.asm_t2009m1.search;
+package com.example.asm_t2009m1.entity.search;
 
 public enum SearchCriteriaOperator {
     EQUALS, NOT_EQUALS,

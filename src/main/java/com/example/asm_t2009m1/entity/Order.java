@@ -1,9 +1,10 @@
 package com.example.asm_t2009m1.entity;
 
 import com.example.asm_t2009m1.entity.base.BaseEntity;
-import com.example.asm_t2009m1.entity.emuns.OrderSimpleStatus;
+import com.example.asm_t2009m1.entity.enums.OrderSimpleStatus;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Set;
@@ -17,7 +18,7 @@ import java.util.Set;
 public class Order extends BaseEntity {
     @Id
     private String id;
-    private String userId;//0
+    private String userId;//
     private BigDecimal totalPrice;
     @Enumerated(EnumType.ORDINAL)
     private OrderSimpleStatus status;

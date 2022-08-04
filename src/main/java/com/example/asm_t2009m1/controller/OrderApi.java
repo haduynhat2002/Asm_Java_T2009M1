@@ -1,10 +1,10 @@
 package com.example.asm_t2009m1.controller;
 
 import com.example.asm_t2009m1.entity.Order;
-import com.example.asm_t2009m1.search.FilterParameter;
-import com.example.asm_t2009m1.search.OrderSpecification;
-import com.example.asm_t2009m1.search.SearchCriteria;
-import com.example.asm_t2009m1.search.SearchCriteriaOperator;
+import com.example.asm_t2009m1.entity.search.FilterParameter;
+import com.example.asm_t2009m1.entity.search.OrderSpecification;
+import com.example.asm_t2009m1.entity.search.SearchCriteria;
+import com.example.asm_t2009m1.entity.search.SearchCriteriaOperator;
 import com.example.asm_t2009m1.service.OrderService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.domain.Specification;

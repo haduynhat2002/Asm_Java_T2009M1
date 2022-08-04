@@ -16,7 +16,7 @@ public class ProductDTO {
     private String slug;
     private String description;
     private String detail;
-    private String thumbnails; // nhiều ảnh cách nhau bởi dấu ,
+    private String thumbnails;
     private BigDecimal price;
     private String createdAt;
     private String updatedAt;

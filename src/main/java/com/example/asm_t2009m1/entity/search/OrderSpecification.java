@@ -1,4 +1,4 @@
-package com.example.asm_t2009m1.search;
+package com.example.asm_t2009m1.entity.search;
 
 import com.example.asm_t2009m1.entity.OrderDetail;
 import com.example.asm_t2009m1.entity.Product;
@@ -13,6 +13,9 @@ public class OrderSpecification implements Specification<Order> {
     public OrderSpecification(SearchCriteria searchCriteria) {
         this.searchCriteria = searchCriteria;
     }
+
+    // criteriaBuilder giúp xử lý các toán tử.
+    // root lấy ra trường và giá trị các trường.
     @Override
     public Predicate toPredicate(
             Root<Order> root,
@@ -42,7 +45,9 @@ public class OrderSpecification implements Specification<Order> {
             case JOIN:
                 Join<OrderDetail, Product> orderDetailProductJoin = root.join("orderDetails").join("product");
                 Predicate predicate = criteriaBuilder.or(
+                        // tìm trong order bản ghi có id giống giá trị truyền vào
                         criteriaBuilder.like(root.get("id"), "%" + searchCriteria.getValue() + "%"),
+                        // hoặc tìm trong bảng product bản ghi có name giống với giá trị
                         criteriaBuilder.like(orderDetailProductJoin.get("name"), "%" + searchCriteria.getValue() + "%")
                 );
                 return predicate;
